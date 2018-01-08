@@ -33,8 +33,6 @@ class App extends Component {
     });
   }
   render() {
-    console.log(this.state.users);
-    console.log(this.props);
     return (
       <Container>
         <Header>
@@ -70,6 +68,10 @@ const refs = props => {
     {
       name: "users",
       ref: firebase.firestore().collection("users")
+    },
+    {
+      name: "todos",
+      ref: firebase.firestore().collection("todos")
     }
   ];
 };
