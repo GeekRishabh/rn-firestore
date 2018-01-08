@@ -27,6 +27,15 @@ class App extends Component {
       users: []
     };
   }
+  addUser() {
+    this.ref.add({
+      name: "testing"
+    });
+  }
+  removeUser() {}
+  updateUser(){
+
+  }
   render() {
     console.log(this.state.users);
     console.log(this.props);
@@ -51,6 +60,9 @@ class App extends Component {
               </ListItem>
             ))}
           </List>
+          <Button onPress={() => this.addUser()}>
+            <Text>CLICK TO ADD</Text>
+          </Button>
         </Content>
       </Container>
     );
@@ -60,7 +72,7 @@ class App extends Component {
 const refs = props => {
   return [
     {
-      name: 'users',
+      name: "users",
       ref: firebase.firestore().collection("users")
     }
   ];
