@@ -22,6 +22,7 @@ import firebase from "react-native-firebase";
 class App extends Component {
   constructor() {
     super();
+    this.ref = firebase.firestore().collection("users");
     this.state = {
       loading: true,
       users: []
@@ -29,12 +30,8 @@ class App extends Component {
   }
   addUser() {
     this.ref.add({
-      name: "hello me"
+      name: "hellome"
     });
-  }
-  removeUser() {}
-  updateUser(){
-
   }
   render() {
     console.log(this.state.users);
