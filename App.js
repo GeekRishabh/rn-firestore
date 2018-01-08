@@ -28,7 +28,7 @@ class App extends Component {
     };
   }
   addUser() {
-    this.ref.add({
+    this.props.refs[0].ref.add({
       name: "testme"
     });
   }
