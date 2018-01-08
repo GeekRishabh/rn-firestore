@@ -26,7 +26,6 @@ const withFirestore = refs => WrappedComponent =>
   class extends Component {
     constructor(props) {
       super(props);
-
       this.state = {
         loading: true,
         listeners: null,
