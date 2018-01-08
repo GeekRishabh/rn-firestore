@@ -29,7 +29,7 @@ class App extends Component {
   }
   addUser() {
     this.ref.add({
-      name: "testing"
+      name: "hello me"
     });
   }
   removeUser() {}
